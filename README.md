@@ -1,7 +1,7 @@
 # Magang Bayucaraka 2024 - PX4 Simulation
 
-Nama    : \
-NRP     : 
+Nama    : Farrel Ganendra\
+NRP     : 5024231036
 
 ## Cara Pengumpulan
 - Fork repositori ini
