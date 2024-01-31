@@ -34,6 +34,10 @@ add_executable(jalan_kotak src/kotak.cpp)
 ament_target_dependencies(jalan_kotak rclcpp px4_msgs)
 install(TARGETS jalan_kotak DESTINATION lib/${PROJECT_NAME})
 
+add_executable(jalan_lingkaran src/lingkaran.cpp)
+ament_target_dependencies(jalan_lingkaran rclcpp px4_msgs)
+install(TARGETS jalan_lingkaran DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
