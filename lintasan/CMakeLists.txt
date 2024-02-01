@@ -38,6 +38,10 @@ add_executable(jalan_lingkaran src/lingkaran.cpp)
 ament_target_dependencies(jalan_lingkaran rclcpp px4_msgs)
 install(TARGETS jalan_lingkaran DESTINATION lib/${PROJECT_NAME})
 
+add_executable(jalan_pentagram src/pentagram.cpp)
+ament_target_dependencies(jalan_pentagram rclcpp px4_msgs)
+install(TARGETS jalan_pentagram DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
