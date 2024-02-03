@@ -44,10 +44,10 @@ public:
 				{
 				this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_NAV_LAND, 1, 0);
 				}
-				else if (offboard_setpoint_counter_ == 400){this->disarm();}
+				else if (offboard_setpoint_counter_ == 470){this->disarm();}
 			}
 
-			if (offboard_setpoint_counter_ <= 400){offboard_setpoint_counter_++;}
+			if (offboard_setpoint_counter_ <= 470){offboard_setpoint_counter_++;}
 
 		};
 		timer_ = this->create_wall_timer(100ms, timer_callback);
