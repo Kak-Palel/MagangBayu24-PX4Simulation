@@ -38,7 +38,14 @@ public:
 			publish_trajectory_setpoint();
 			
 			if (offboard_setpoint_counter_ % 10 == 0 && offboard_setpoint_counter_ > 40) {angle += 0.314;}
-			if(angle >= 6.28) {angle = 0;}
+			if(angle >= 6.28)
+			{
+				if(offboard_setpoint_counter_ < 780)
+				{
+				this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_NAV_LAND, 1, 0);
+				}
+				else if (offboard_setpoint_counter_ == 400){this->disarm();}
+			}
 
 			offboard_setpoint_counter_++;
 
